@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestion de Budget</title>
+  <style>
+    :root {
+      --bg: #f2f5f8;
+      --card: #ffffff;
+      --ink: #1c2733;
+      --mut: #6b7886;
+      --line: #dde3ea;
+      --inc: #1f9d6b;
+      --exp: #e2572b;
+      --sav: #2b6fdc;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #10161d;
+        --card: #18212b;
+        --ink: #e8eef4;
+        --mut: #93a1b0;
+        --line: #2a3643;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 16px;
+    }
+    header {
+      max-width: 800px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    h1 { margin: 0; font-size: 24px; }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .kpi {
+      background: var(--bg);
+      padding: 12px;
+      border-radius: 8px;
+    }
+    .kpi small { color: var(--mut); display: block; font-size: 12px; }
+    .kpi b { font-size: 20px; color: var(--ink); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gestion de Budget</h1>
+  </header>
+
+  <main id="app">
+    <div class="card">
+      <h2>Bienvenue</h2>
+      <p>L'application s'est chargée correctement.</p>
+      <div class="kpis">
+        <div class="kpi">
+          <small>Statut</small>
+          <b>Actif</b>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
